@@ -1,38 +1,97 @@
-.App {
+/*  Definición de variables */
+:root {
+  --ouch: #f71735;
+  --ouchBackground: #f9c8cf;
+  --si: #399e5a;
+  --siBackground: #cdf3d9;
+  --no: #3d2b56;
+  --noBackground: #e1cff9;
+  --varios: #2c497f;
+  --variosBackground: #d3e0f8;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
   text-align: center;
+  min-height: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header img {
+  width: 50%;
+  margin-top: 10px;
+  min-width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexContainer {
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.vertical {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: 4px solid red;
+  font-weight: 600;
+  align-self: center;
+  margin-bottom: 0.5vh;
+  margin-left: 0.25vh;
+  margin-right: 0.25vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sinOuch {
+  justify-content: space-between;
+}
+
+.sino button {
+  height: 30vh;
+  width: 44vw;
+}
+
+button.si {
+  color: var(--si);
+  border-color: var(--si);
+  background-color: var(--siBackground);
+  font-size: 50pt;
+}
+
+button.no {
+  color: var(--no);
+  border-color: var(--no);
+  background-color: var(--noBackground);
+  font-size: 50pt;
+}
+
+.varios button {
+  width: 44vw;
+  height: 14.75vh;
+  color: var(--varios);
+  border-color: var(--varios);
+  background-color: var(--variosBackground);
+  font-size: 20pt;
+}
+
+button.ouch {
+  height: 10vh;
+  width: 90vw;
+  color: var(--ouch);
+  border-color: var(--ouch);
+  background-color: var(--ouchBackground);
+  font-size: 30pt;
 }
